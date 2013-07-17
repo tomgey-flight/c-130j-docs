@@ -1,0 +1,95 @@
+%\documentclass[a4paper, 12pt, BCOR5mm, footsepline, parskip+, chapterprefix, smallheadings, footexclude, headexclude, DIV14, abstracton, pointlessnumbers, tablecaptionabove]{scrreprt}
+\documentclass[
+  parskip=half,
+  paper=a4, 12pt, BCOR5mm, DIV14,
+  footsepline, chapterprefix,
+  abstract=true,
+  headings=small,
+  footinclude=false,
+  headinclude=false,
+  numbers=noenddot,
+  captions=tableheading,
+  listof=totoc
+]{scrreprt}
+
+%===========================================================
+% page layout
+%\usepackage[activate=normal]{pdfcprot}
+\usepackage{scrpage2}
+\pagestyle{scrheadings}
+% ARTICLE: remove the following two lines if you are in article mode
+\renewcommand*{\chapterpagestyle}{scrheadings}
+\renewcommand*{\partpagestyle}{empty}
+\renewcommand{\headfont}{\normalfont\sffamily\bfseries}
+\renewcommand{\pnumfont}{\normalfont\sffamily\bfseries}
+\newcommand{\seeSec}[1]{see Section \ref{#1}}
+\newcommand{\seeFig}[1]{see Figure \ref{#1}}
+\automark{chapter}
+\cfoot{}
+\chead{}
+%\lefoot{\pagemark}
+\ofoot{\headmark \hspace{1em} \hspace{1em}\pagemark}
+\ohead{}
+%===========================================================
+
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+
+\usepackage{makeidx}
+\makeindex
+
+%\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{xparse}
+\DeclareDocumentCommand\itembf{mg}{%
+  {\item{\sffamily{\bfseries #1}\IfNoValueF{#2}{ (#2)}.}\enspace}%
+}
+\newcommand{\boldul}[1]{\textbf{\underline{#1}}}
+
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage[acronym,toc,nomain,nonumberlist,section=chapter]{glossaries}
+\makeglossary
+
+\usepackage[tikz]{bclogo}
+
+% ------------------------------------------------------------------------------
+
+\author{}
+\title{C-130J Super Hercules \\
+\large Flight Manual}
+
+% ------------------------------------------------------------------------------
+\begin{document}
+
+\selectlanguage{english}
+
+\maketitle
+
+\include{license}
+
+\tableofcontents
+
+\chapter{Introduction}
+
+A WARNING is an: Operating procedure, technique, etc., that may result in personal injury or loss of life if not carefully followed.\\
+A CAUTION is an: Operating procedure, technique, etc., that may result in damage to equipment if not carefully followed.
+
+\begin{bclogo}[logo=\bclampe, ombre=false, couleurBarre=blue, marge=18, noborder=true]{Note}
+An operating procedure, technique, etc., that is considered essential to emphasize.
+\end{bclogo}
+
+\include{glossary}
+\include{1_aircraft}
+\include{2_normal_procedures}
+
+\makeatletter
+\renewcommand*{\toclevel@chapter}{-1} % Put chapter depth at the same level as \part.
+\makeatother
+
+\listoffigures
+
+\renewcommand*{\acronymname}{List of Abbreviations/Acronyms}
+\printglossary[toctitle={Abbreviations/Acronyms},style=indexgroup]
+
+\end{document}
