@@ -48,6 +48,7 @@
 \newcommand{\boldul}[1]{\textbf{\underline{#1}}}
 
 \usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage[all]{hypcap} % link to top of images
 \usepackage[acronym,toc,nomain,nonumberlist,section=chapter]{glossaries}
 \makeglossary
 
@@ -81,7 +82,10 @@ An operating procedure, technique, etc., that is considered essential to emphasi
 
 \include{glossary}
 \include{1_aircraft}
-\include{2_normal_procedures}
+\include{2_HDD_and_AMU}
+%\include{3_HUD}
+%\include{4_FMC}
+\include{5_normal_procedures}
 
 \makeatletter
 \renewcommand*{\toclevel@chapter}{-1} % Put chapter depth at the same level as \part.
