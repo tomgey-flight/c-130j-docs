@@ -65,6 +65,8 @@ APU bleed air valve switch on the Bleed Air Panel.
 
 \gls{ACAWS}
 
+Alert levels: Special Alerts, Warnings, Cautions, and Advisories
+
 \section{Electric System}
 
 2 batteries: Utility, Avionics 24V 42Ah at C1
@@ -130,10 +132,21 @@ Utility hydraulic system: wing flaps, main landing gear, normal braking, nose wh
 % left 80px/87px
 % total 800px -> l: 112px, r: 912
 
+\section{Environment Control System (ECS)}
+203430-4-1 Turbine, Aircraft Cooling III End Item Identification: C130H air conditioning system\\
+9.580 in. lg O/a;
+2.680 in. flange od cabin air outlet;
+2.690 in. flange od cabin air inlet;
+3.500 in. tube od coolant air outlet;
+7.650 in. flange coolant air inlet;
+
+188380-4-1, Separator, Water, Cabin Air. 30.870 IN LG
+
 \chapter{Cockpit Controls}
 
 Blah blah
 
+% ==============================================================================
 \section{Overhead Panel}
 
 \subsection{Electrical Panel}
@@ -183,6 +196,7 @@ The \gls{APU}...
       \itembf{RUN} APU door opens.
       \itembf{START}{spring-loaded position} If APU door opened at least 15° starter engages
     \end{itemize}
+  \itembf{Start light} Illuminates if the start circuit is energized. The light remains illuminated until the compressor reaches approximately 50\% \gls{RPM}.
   \itembf{\gls{EGT} indication}
   \itembf{\gls{RPM} indication}
   \itembf{Fire handle} The T-shaped fire handle
@@ -194,6 +208,7 @@ The \gls{APU}...
     \end{enumerate}
 \end{enumerate}
 
+% ==============================================================================
 \section{Instrument Panel}
 
 \subsection{Avionics Management Unit (AMU)}
@@ -201,10 +216,7 @@ The \gls{APU}...
 
 See \nameref{chap:amu} for details.
 
-\subsection{Head Down Displays (HDD)}
-\label{sec:hdd}
-
-\subsection{Autopilot}
+\subsection{Reference Set/Mode Select Panel}
 
 Reference Settings
 \begin{enumerate}
@@ -232,6 +244,35 @@ REF SET\\
 ALT SET\\
 BARO SET
 
+\subsection{Head Down Displays (HDD)}
+\label{sec:hdd}
+
+\subsection{Mode Annunciator Panel}
+
+\subsection{Standby Altimeter/Airspeed Indicator}
+
+\subsection{Flap and Trim Indicator Panel}
+
+\subsection{Landing Gear/Landing Lights Panel}
+
+\begin{enumerate}
+  \itembf{Landing Gear Control Lever}
+    \begin{itemize}
+      \itembf{UP}
+      \itembf{DOWN}
+    \end{itemize}
+  \itembf{Landing Gear Indicators} Green light indicates down and locked of respective gear.
+    \begin{itemize}
+      \itembf{LEFT}
+      \itembf{NOSE}
+      \itembf{RIGHT}
+    \end{itemize}
+  \itembf{Lock Release Pushbutton} Override lever latch pin to allow UP selection.
+\end{enumerate}
+
+\subsection{Hydraulic Control Panel}
+
+% ==============================================================================
 \section{Flight Controls}
 
 \subsection{Yoke}
@@ -268,11 +309,18 @@ Shows cargo compartment graphic and CAWS messages. Use \glspl{OSB} to change pag
 
 \paragraph*{AIRDROP PROGRAM}
 
+Only allow extraction chutes that are applicable to the platform weight.
+
 \paragraph*{AIRDROP}
 
 \paragraph*{JETTISON}
 
 \paragraph*{LOCK CONTROL}
+
+\paragraph*{BENDING MOMENTS}
+
+\subsubsection{Warnings}
+ZERO OUT OF LIMITS (Alert)
 
 \subsection{Ramp and Emergency Control Panel (RECP)}
 \label{sec:recp}
