@@ -3,7 +3,7 @@ project(C-130J-docs NONE)
 
 include(UseLATEX.cmake)
 
-add_latex_document(main.tex
+add_latex_document(C-130J-Flight-Manual.tex
   INPUTS 1_aircraft.tex
          2_HDD_and_AMU.tex
          5_normal_procedures.tex
